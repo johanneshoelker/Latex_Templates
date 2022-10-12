@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: LaTeX auto-rebuild
+    command: >
+      while find . -name '*.tex' | xargs inotifywait -qqre modify .; do \
+        pdflatex -pdf -aux-directory=./Workspace/temp -output-directory=./Workspace/Output; \
+      done
+  - name: Terminal
