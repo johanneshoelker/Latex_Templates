@@ -1,0 +1,60 @@
+%used class: memoir and in article form for headers etc.
+\documentclass [11pt, a4paper, oneside, article]{memoir}
+
+%Hyperlinks:
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+
+%Inhaltsverzeichnis:
+\maxtocdepth{subsection} %for depth in contents
+
+%subsection numbering not showed:
+\setsecnumdepth{none}
+\maxsecnumdepth{none}
+
+%Font: Arial
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% wenn unbekannte Silbentrennung dann in nächste zeile und große abstände
+\sloppy
+
+%Zeilenabstand:
+\OnehalfSpacing
+
+%Abstände zum Rand:
+\setlrmarginsandblock{1.5cm}{1.5cm}{*}
+\setulmarginsandblock{1.5cm}{*}{1}
+\checkandfixthelayout
+
+%Umlaute erlauben
+%\usepackage[utf8]{inputenc
+
+%Inserting Images:
+\usepackage{graphicx}
+\graphicspath{ {./Lebenslauf/} }
+% Change Figure Caption language
+\renewcommand{\figurename}{Abbildung}
+\renewcommand{\figurerefname}{Abbildung}
+\renewcommand{\contentsname}{Inhaltsverzeichnis}
+% \renewcommand{\tablename}{Tabelle}
+
+%For Highlighting Commands
+\usepackage{listings}
+\lstset{basicstyle=\tiny}
+
+%Bibliography: APA
+\usepackage{apacite}
+\bibliographystyle{apacite}
+
+%Equations
+\usepackage{amsmath}
+
+%Including PDFs
+\usepackage{pdfpages}
+
+%Für plots und geometrische Formen: tikz
+% \usepackage{microtype}
+\usepackage{vwcol}
+
+%Social Media Icons
+\usepackage{fontawesome}
